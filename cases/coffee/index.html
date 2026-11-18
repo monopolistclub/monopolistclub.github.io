@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Зерно и море: кофейня в Сочи</title>
+<meta name="description" content="Specialty-кофейня у моря в Сочи. Свежая обжарка, завтраки весь день, предзаказ кофе к выходу.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f7efe4;--paper:#fffaf3;--coffee:#3b2416;--brown:#6b3f22;--caramel:#c8864a;--sea:#2d6a73;--muted:#7d6656}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Manrope,sans-serif;background:var(--cream);color:var(--coffee);line-height:1.6;font-size:17px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+h1,h2,h3{font-family:Lora,serif;line-height:1.15}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.demo{background:#1d120b;color:#e8d6c2;font-size:13px;text-align:center;padding:8px 12px}.demo a{color:#f3b67a;font-weight:700}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.logo{font-family:Lora;font-weight:700;font-size:24px}.logo span{color:var(--caramel);font-style:italic}
+nav ul{display:flex;gap:28px;list-style:none;font-weight:600;font-size:15px}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;transition:.25s;cursor:pointer;border:0;font-size:15px;font-family:inherit}
+.btn-d{background:var(--coffee);color:var(--cream)}.btn-d:hover{background:var(--brown)}
+.btn-l{border:2px solid var(--coffee)}.btn-l:hover{background:var(--coffee);color:var(--cream)}
+@media(max-width:760px){nav ul{display:none}}
+.hero{display:grid;grid-template-columns:1fr 1.05fr;gap:50px;align-items:center;padding:30px 0 80px}
+.hero h1{font-size:clamp(40px,6vw,76px);font-weight:700}.hero h1 em{color:var(--caramel)}
+.hero p{font-size:19px;color:var(--muted);margin:22px 0 32px;max-width:480px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero .pic{position:relative;border-radius:240px 240px 28px 28px;overflow:hidden;aspect-ratio:4/4.6;background:linear-gradient(160deg,#c8864a,#3b2416)}
+.hero .pic img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;left:-10px;bottom:40px;background:var(--paper);padding:16px 20px;border-radius:18px;box-shadow:0 20px 40px -20px rgba(59,36,22,.5);display:flex;gap:12px;align-items:center;font-size:14px}
+.badge b{font-family:Lora;font-size:28px;color:var(--brown)}
+.hero-wrap{position:relative}
+.info{display:flex;gap:30px;margin-top:40px;flex-wrap:wrap;font-size:14px;color:var(--muted)}.info b{display:block;color:var(--coffee);font-size:16px}
+@media(max-width:880px){.hero{grid-template-columns:1fr}.hero .pic{aspect-ratio:4/3.4;border-radius:28px}.badge{left:14px}}
+section{padding:90px 0}
+.h{text-align:center;max-width:640px;margin:0 auto 50px}.h h2{font-size:clamp(32px,4.5vw,50px)}.h p{color:var(--muted);margin-top:14px}
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feat div{background:var(--paper);padding:30px 24px;border-radius:24px}
+.feat i{font-style:normal;font-size:32px}.feat h3{font-size:20px;margin:14px 0 8px}.feat p{color:var(--muted);font-size:15px}
+@media(max-width:900px){.feat{grid-template-columns:1fr 1fr}}@media(max-width:520px){.feat{grid-template-columns:1fr}}
+.menu-sec{background:var(--coffee);color:var(--cream)}.menu-sec .h p{color:#c9b29d}
+.tabs{display:flex;justify-content:center;gap:10px;margin-bottom:40px;flex-wrap:wrap}
+.tabs button{padding:10px 22px;border-radius:999px;border:1px solid #6b4b36;background:none;color:var(--cream);font:600 15px Manrope;cursor:pointer}
+.tabs button.on{background:var(--caramel);border-color:var(--caramel);color:#2a170c}
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:6px 60px;max-width:900px;margin:0 auto}
+.item{display:flex;align-items:baseline;gap:12px;padding:16px 0;border-bottom:1px dashed #5a3c29}
+.item b{font-family:Lora;font-size:20px;font-weight:500}.item small{display:block;color:#c9b29d;font-size:14px}
+.item .dots{flex:1}.item .pr{font-weight:700;color:#f3b67a;white-space:nowrap}
+.item button{background:none;border:1px solid #f3b67a;color:#f3b67a;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:18px;line-height:1;flex:none}
+.item button:hover{background:#f3b67a;color:#2a170c}
+@media(max-width:760px){.menu{grid-template-columns:1fr}}
+.order{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+.cart{background:var(--paper);border-radius:28px;padding:34px}
+.cart h3{font-size:26px;margin-bottom:6px}.cart>p{color:var(--muted);font-size:15px;margin-bottom:20px}
+#lines{min-height:60px;margin-bottom:16px}
+#lines div{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #eadccb;font-size:15px}
+#lines .empty{color:var(--muted);border:0}
+.total{display:flex;justify-content:space-between;font-weight:700;font-size:19px;margin:10px 0 20px}
+.cart input,.cart select{width:100%;padding:14px 16px;border-radius:14px;border:1px solid #e0cfbc;background:#fff;font:15px Manrope;margin-bottom:10px;color:var(--coffee)}
+.cart .btn{width:100%}
+.ok{display:none;background:#e5f2e8;color:#22543d;padding:14px;border-radius:14px;margin-top:12px;font-size:15px}
+.where{border-radius:28px;overflow:hidden;background:var(--sea);color:#eaf6f6;padding:34px;min-height:100%}
+.where h3{font-size:28px;margin-bottom:16px}.where p{margin-bottom:14px;color:#cfe7e8}
+.map{margin-top:20px;border-radius:18px;height:200px;background:
+ radial-gradient(circle at 62% 46%,#f3b67a 0 9px,transparent 10px),
+ radial-gradient(circle at 62% 46%,rgba(243,182,122,.35) 0 26px,transparent 27px),
+ linear-gradient(115deg,transparent 0 55%,#1f525a 55% 100%),
+ repeating-linear-gradient(0deg,#3c7f88 0 2px,transparent 2px 38px),
+ repeating-linear-gradient(90deg,#3c7f88 0 2px,transparent 2px 46px),#367780}
+@media(max-width:860px){.order{grid-template-columns:1fr}}
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev div{background:var(--paper);border-radius:24px;padding:28px}.rev p{font-family:Lora;font-style:italic;font-size:18px;margin:10px 0 16px}.rev span{color:var(--muted);font-size:14px}
+.st{color:var(--caramel);letter-spacing:2px}
+@media(max-width:860px){.rev{grid-template-columns:1fr}}
+footer{background:#1d120b;color:#c9b29d;padding:40px 0;font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}footer a{color:#f3b67a}
+</style>
+</head>
+<body>
+<div class="demo">Это концепт-лендинг из портфолио NS. <a href="../../#work">← Все работы</a></div>
+<div class="wrap">
+<nav><a class="logo" href="#">Зерно <span>&</span> море</a><ul><li><a href="#menu">Меню</a></li><li><a href="#order">Предзаказ</a></li><li><a href="#where">Как найти</a></li></ul><a href="#order" class="btn btn-d">Заказать к выходу</a></nav>
+<div class="hero">
+  <div>
+    <h1>Кофе, ради которого <em>стоит</em> проснуться</h1>
+    <p>Specialty-кофейня в пяти минутах от набережной Сочи. Свежая обжарка каждую неделю, завтраки весь день и терраса с видом на море.</p>
+    <div class="cta"><a href="#order" class="btn btn-d">Предзаказ без очереди</a><a href="#menu" class="btn btn-l">Смотреть меню</a></div>
+    <div class="info"><div><b>07:30 — 22:00</b>каждый день</div><div><b>ул. Приморская, 12</b>Центральный район</div><div><b>4,9 ★</b>1 200+ отзывов</div></div>
+  </div>
+  <div class="hero-wrap"><div class="pic"><img src="../../assets/img/coffee.png" alt="Бариста рисует латте-арт" onerror="this.remove()"></div>
+  <div class="badge"><b>7 мин</b>в среднем от заказа<br>до вашего стакана</div></div>
+</div>
+</div>
+
+<section style="padding-top:20px"><div class="wrap">
+  <div class="h"><h2>Почему к нам возвращаются</h2><p>Мы не сеть. Каждую чашку делает человек, который знает, откуда это зерно.</p></div>
+  <div class="feat">
+    <div><i>🌱</i><h3>Своя обжарка</h3><p>Зерно из Эфиопии, Колумбии и Бразилии. Обжариваем сами, небольшими партиями.</p></div>
+    <div><i>🥐</i><h3>Завтраки весь день</h3><p>Сырники, круассаны и боулы. Печём каждое утро прямо на кухне.</p></div>
+    <div><i>🌊</i><h3>Терраса у моря</h3><p>12 столиков на свежем воздухе и пледы на прохладные вечера.</p></div>
+    <div><i>💻</i><h3>Можно работать</h3><p>Быстрый Wi-Fi, розетки у каждого стола и тихий зал на втором этаже.</p></div>
+  </div>
+</div></section>
+
+<section class="menu-sec" id="menu"><div class="wrap">
+  <div class="h"><h2>Меню</h2><p>Нажмите «+», чтобы добавить позицию в предзаказ</p></div>
+  <div class="tabs"><button class="on" data-t="coffee">Кофе</button><button data-t="alt">Не кофе</button><button data-t="food">Еда</button></div>
+  <div class="menu" id="menuList"></div>
+</div></section>
+
+<section id="order"><div class="wrap order">
+  <div class="cart">
+    <h3>Предзаказ к выходу</h3><p>Оформите заказ онлайн и заберите его без очереди. Оплата на месте.</p>
+    <div id="lines"><div class="empty">Пока пусто. Добавьте что-нибудь из меню ☕</div></div>
+    <div class="total"><span>Итого</span><span id="sum">0 ₽</span></div>
+    <form id="f">
+      <input required placeholder="Ваше имя">
+      <input required type="tel" placeholder="+7 (___) ___-__-__">
+      <select><option>Заберу через 10 минут</option><option>Через 20 минут</option><option>Через 30 минут</option></select>
+      <button class="btn btn-d">Оформить предзаказ</button>
+      <div class="ok" id="ok">Готово! Это демо: заказ никуда не отправлен. В рабочем проекте он сразу падает бариста в Telegram.</div>
+    </form>
+  </div>
+  <div class="where" id="where">
+    <h3>Как нас найти</h3>
+    <p>📍 Сочи, ул. Приморская, 12. Вход со стороны парка.</p>
+    <p>🚗 Бесплатная парковка 30 минут для гостей.</p>
+    <p>📞 +7 (862) 000-00-00</p>
+    <div class="map" role="img" aria-label="Схема расположения кофейни"></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="h"><h2>Что говорят гости</h2></div>
+  <div class="rev">
+    <div><span class="st">★★★★★</span><p>«Лучший флэт уайт в Сочи. Беру каждое утро по дороге на работу через предзаказ».</p><span>Анна, Яндекс Карты</span></div>
+    <div><span class="st">★★★★★</span><p>«Сырники как у бабушки, а вид с террасы просто бесценный. Приходим всей семьёй».</p><span>Дмитрий, 2ГИС</span></div>
+    <div><span class="st">★★★★★</span><p>«Работаю тут удалённо по полдня. Тихо, вкусно, ребята-бариста знают по имени».</p><span>Мария, Google</span></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© Зерно & море, 2026 · концепт</span><span>Дизайн и разработка: <a href="../../">NS</a></span></div></footer>
+
+<script>
+const M={coffee:[["Эспрессо","Эфиопия, яркая кислотность",160],["Флэт уайт","двойной эспрессо и молоко",260],["Капучино","классика, 300 мл",240],["Раф «Морской»","с солёной карамелью",310],["Фильтр V60","зерно недели",230],["Колд брю","настаиваем 18 часов",270]],alt:[["Матча латте","японская матча, овсяное молоко",290],["Какао","бельгийский шоколад",250],["Лимонад","фейхоа и мята",220],["Чай","улун, сенча, иван-чай",190]],food:[["Сырники","со сметаной и ягодами",340],["Круассан","сливочный, утренний",180],["Боул с лососем","рис, авокадо, эдамаме",520],["Тост с авокадо","яйцо пашот, микрозелень",410]]};
+const cart={};const list=document.getElementById('menuList');
+function draw(t){list.innerHTML=M[t].map(([n,d,p])=>`<div class="item"><div><b>${n}</b><small>${d}</small></div><span class="dots"></span><span class="pr">${p} ₽</span><button aria-label="Добавить ${n}" data-n="${n}" data-p="${p}">+</button></div>`).join('')}
+draw('coffee');
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('on'));b.classList.add('on');draw(b.dataset.t)});
+list.onclick=e=>{const b=e.target.closest('button');if(!b)return;const n=b.dataset.n;cart[n]=cart[n]||{p:+b.dataset.p,q:0};cart[n].q++;b.textContent='✓';setTimeout(()=>b.textContent='+',700);renderCart()};
+function renderCart(){const L=document.getElementById('lines');const k=Object.keys(cart);if(!k.length)return;L.innerHTML=k.map(n=>`<div><span>${n} × ${cart[n].q}</span><span>${cart[n].p*cart[n].q} ₽</span></div>`).join('');document.getElementById('sum').textContent=k.reduce((s,n)=>s+cart[n].p*cart[n].q,0)+' ₽'}
+document.getElementById('f').onsubmit=e=>{e.preventDefault();document.getElementById('ok').style.display='block'};
+</script>
+</body>
+</html>
