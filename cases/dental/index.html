@@ -67,6 +67,12 @@ section{padding:90px 0}
 .faq details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 24px;margin-bottom:10px}
 .faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}.faq summary:after{content:"+";color:var(--teal);font-size:22px;line-height:1}
 .faq details[open] summary:after{content:"−"}.faq p{color:var(--muted);margin-top:10px}
+.rt{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}.rt b{color:#b45309}
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.revs>div{background:var(--bg);border-radius:24px;padding:26px}.revs .src{font-size:13px;font-weight:700;color:#b45309}.revs p{margin:10px 0;font-size:16px}.revs span{color:var(--muted);font-size:14px}
+@media(max-width:860px){.revs{grid-template-columns:1fr}}
+.mcta{display:none}
+@media(max-width:700px){.mcta{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:10px;right:10px;bottom:10px;z-index:30}.mcta a{padding:15px;border-radius:14px;text-align:center;font-weight:700;box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}footer{padding-bottom:90px}}
 footer{background:var(--ink);color:#9fc2bd;padding:40px 0;font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}footer a{color:#5eead4}
 </style>
 </head>
@@ -111,15 +117,20 @@ footer{background:var(--ink);color:#9fc2bd;padding:40px 0;font-size:14px}footer 
 <section id="docs" style="background:#fff"><div class="wrap">
   <div class="h"><h2>Врачи, которым доверяют</h2></div>
   <div class="docs">
-    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#5eead4,#0f766e)">АК</div><h3>Алексей Ковалёв</h3><span>Хирург-имплантолог · стаж 15 лет</span><p>Более 3 000 установленных имплантов, обучение в Германии.</p></div>
-    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#99f6e4,#14b8a6)">ЕС</div><h3>Елена Смирнова</h3><span>Терапевт · стаж 11 лет</span><p>Лечение под микроскопом, работает с тревожными пациентами.</p></div>
-    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#a5f3fc,#0e7490)">ИМ</div><h3>Игорь Мартынов</h3><span>Ортопед · стаж 13 лет</span><p>Виниры и коронки, цифровое планирование улыбки.</p></div>
+    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#5eead4,#0f766e)">АК</div><h3>Алексей Ковалёв</h3><span>Хирург-имплантолог · стаж 15 лет</span><p>Более 3 000 установленных имплантов, обучение в Германии.</p><div class="rt"><b>4,9 ★</b> 312 отзывов на ПроДокторов</div></div>
+    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#99f6e4,#14b8a6)">ЕС</div><h3>Елена Смирнова</h3><span>Терапевт · стаж 11 лет</span><p>Лечение под микроскопом, работает с тревожными пациентами.</p><div class="rt"><b>5,0 ★</b> 184 отзыва на ПроДокторов</div></div>
+    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#a5f3fc,#0e7490)">ИМ</div><h3>Игорь Мартынов</h3><span>Ортопед · стаж 13 лет</span><p>Виниры и коронки, цифровое планирование улыбки.</p><div class="rt"><b>4,9 ★</b> 241 отзыв на ПроДокторов</div></div>
+  </div>
+  <div class="revs">
+    <div><div class="src">Яндекс Карты · ★★★★★</div><p>«Боялась стоматологов с детства. Елена Сергеевна всё объясняла, не было ни капли боли. Теперь хожу без страха».</p><span>Ирина, лечение кариеса</span></div>
+    <div><div class="src">ПроДокторов · ★★★★★</div><p>«Ставил два импланта. Цена в договоре совпала с итоговой до рубля, оплатил в рассрочку».</p><span>Сергей, имплантация</span></div>
+    <div><div class="src">2ГИС · ★★★★★</div><p>«Сделали виниры за 2 визита, примерили улыбку заранее на компьютере. Очень довольна».</p><span>Ольга, виниры</span></div>
   </div>
 </div></section>
 
 <section id="quiz"><div class="wrap">
   <div class="quiz">
-    <div><h2>Узнайте стоимость лечения за 1 минуту</h2><p>Ответьте на 3 вопроса: администратор подготовит предварительный расчёт и подберёт удобное время.</p></div>
+    <div><h2>Узнайте стоимость лечения за 1 минуту</h2><p>Ответьте на 5 коротких вопросов и сразу увидите примерную стоимость. Администратор подберёт удобное время для бесплатной диагностики.</p></div>
     <div class="qbox" id="qbox"></div>
   </div>
 </div></section>
@@ -132,13 +143,14 @@ footer{background:var(--ink);color:#9fc2bd;padding:40px 0;font-size:14px}footer 
   <details><summary>Лечите детей?</summary><p>Да, с 3 лет. Есть детский врач и игровая зона, при необходимости лечение во сне.</p></details>
 </div></section>
 
+<div class="mcta"><a href="tel:+78620000000" style="background:#fff;border:1px solid #e0eeec">📞 Позвонить</a><a href="#quiz" style="background:#0f9488;color:#fff">Записаться</a></div>
 <footer><div class="wrap"><span>© Белый берег, 2026 · концепт. Имеются противопоказания, необходима консультация специалиста.</span><span>Разработка: <a href="../../">NS</a></span></div></footer>
 
 <script>
-const Q=[["Что беспокоит?",["Болит зуб","Нет зуба / нескольких","Хочу красивую улыбку","Профилактика, чистка"]],["Когда удобно прийти?",["Как можно скорее","На этой неделе","В ближайший месяц","Пока просто узнаю цены"]],["Как предпочитаете оплату?",["Сразу","Рассрочка 0%","ДМС","Пока не знаю"]]];
-let i=0;const box=document.getElementById('qbox');
-function r(){if(i<Q.length){box.innerHTML=`<div class="prog"><span style="width:${(i+1)*25}%"></span></div><div class="step">Вопрос ${i+1} из ${Q.length+1}</div><h3>${Q[i][0]}</h3><div class="opts">${Q[i][1].map(o=>`<button>${o}</button>`).join('')}</div>`;box.querySelectorAll('button').forEach(b=>b.onclick=()=>{i++;r()})}
-else{box.innerHTML=`<div class="prog"><span style="width:100%"></span></div><div class="step">Последний шаг</div><h3>Куда отправить расчёт?</h3><form id="qf"><input required placeholder="Имя"><input required type="tel" placeholder="+7 (___) ___-__-__"><button class="btn btn-t" style="width:100%">Получить расчёт и скидку</button></form>`;document.getElementById('qf').onsubmit=e=>{e.preventDefault();box.innerHTML='<h3>Спасибо! 🦷</h3><p style="color:#5d7676">Это демо: заявка никуда не отправлена. В рабочей версии ответы квиза и контакт сразу попадают в CRM клиники, а администратор получает уведомление.</p>'}}}
+const Q=[["Что беспокоит?",[["Болит зуб",[5500,14000]],["Нет зуба / нескольких",[49000,98000]],["Хочу красивую улыбку",[32000,256000]],["Профилактика, чистка",[4900,4900]]]],["Сколько зубов нужно лечить?",[["Один",1],["2–3",2.5],["Больше трёх",4],["Не знаю, нужна диагностика",1]]],["Были ли вы у стоматолога за последний год?",[["Да",1],["Нет",1],["Боюсь идти",1]]],["Когда удобно прийти?",[["Как можно скорее",1],["На этой неделе",1],["В ближайший месяц",1]]],["Как предпочитаете оплату?",[["Сразу",1],["Рассрочка 0%",1],["ДМС",1]]]];
+let i=0,base=null,mult=1,inst=false;const box=document.getElementById('qbox'),N=Q.length+1;
+function r(){if(i<Q.length){box.innerHTML=`<div class="prog"><span style="width:${(i+1)/N*100}%"></span></div><div class="step">Вопрос ${i+1} из ${N}</div><h3>${Q[i][0]}</h3><div class="opts">${Q[i][1].map((o,k)=>`<button data-k="${k}">${o[0]}</button>`).join('')}</div>`;box.querySelectorAll('button').forEach(b=>b.onclick=()=>{const o=Q[i][1][b.dataset.k];if(i==0)base=o[1];if(i==1&&base[0]!==base[1])mult=o[1];if(i==4)inst=o[0].startsWith('Рассрочка');i++;r()})}
+else{const lo=Math.round(base[0]*(base[0]===base[1]?1:mult)/100)*100,hi=Math.round(base[1]*mult/100)*100,f=n=>n.toLocaleString('ru')+' ₽';box.innerHTML=`<div class="prog"><span style="width:100%"></span></div><div class="step">Предварительный расчёт</div><h3>${lo===hi?f(lo):f(lo)+' – '+f(hi)}</h3><p style="color:#5d7676;font-size:15px;margin:-8px 0 16px">${inst?`В рассрочку от ${f(Math.round(lo/12/10)*10)} в месяц, без переплаты. `:''}Точную сумму врач зафиксирует в договоре после бесплатной диагностики.</p><form id="qf"><input required placeholder="Имя"><input required type="tel" placeholder="+7 (___) ___-__-__"><button class="btn btn-t" style="width:100%">Записаться на бесплатную диагностику</button></form>`;document.getElementById('qf').onsubmit=e=>{e.preventDefault();box.innerHTML='<h3>Спасибо! 🦷</h3><p style="color:#5d7676">Это демо: заявка никуда не отправлена. В рабочей версии ответы квиза и контакт сразу попадают в CRM клиники, а администратор получает уведомление.</p>'}}}
 r();
 </script>
 </body>

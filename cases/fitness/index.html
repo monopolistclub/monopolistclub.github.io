@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ЖАР: фитнес-студия</title>
-<meta name="description" content="Фитнес-студия функционального тренинга в Сочи. Пробная неделя за 490 ₽.">
+<meta name="description" content="Фитнес-студия функционального тренинга в Сочи. Первая тренировка бесплатно.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -66,19 +66,32 @@ section{padding:100px 0}
 .offer input{padding:15px;border-radius:10px;border:1px solid #333;background:#151515;color:#fff;font:16px Manrope}
 .ok{display:none;padding:12px;border-radius:10px;background:#1c1c1c;color:var(--fire2);font-size:14px}
 @media(max-width:860px){.offer{grid-template-columns:1fr}}
+.coaches{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.coaches div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
+.coaches i{display:grid;place-items:center;aspect-ratio:1/1;border-radius:14px;font:700 54px Oswald;font-style:normal;margin-bottom:16px;color:#000}
+.coaches b{display:block;font-size:19px}.coaches span{color:var(--muted);font-size:14px}
+@media(max-width:900px){.coaches{grid-template-columns:1fr 1fr}}
+.ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.st1{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px}
+.st1.top{border-color:var(--fire);background:linear-gradient(160deg,#2a1206,#151515)}
+.st1 small{color:var(--fire);font-weight:800;text-transform:uppercase;font-size:12px;letter-spacing:.08em}.st1 h3{font-size:26px;margin:10px 0}
+.st1 b{font-family:Oswald;font-size:44px;display:block;line-height:1.1}.st1 b s{font-size:20px;color:#666}.st1 p{color:var(--muted);font-size:15px;margin-top:10px}
+@media(max-width:860px){.ladder{grid-template-columns:1fr}}
+.mcta{display:none}
+@media(max-width:700px){.mcta{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.6)}footer{padding-bottom:90px}}
 footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}footer a{color:var(--fire2)}
 </style>
 </head>
 <body>
 <div class="demo">Это концепт-лендинг из портфолио NS. <a href="../../#work">← Все работы</a></div>
-<div class="promo">🔥 Пробная неделя за 490 ₽ вместо 3 500 ₽: осталось <b id="left">17</b> мест</div>
+<div class="promo">🔥 Первая тренировка бесплатно: в этом месяце осталось <b id="left">17</b> мест</div>
 <div class="wrap">
-<nav><a href="#" class="logo">ЖА<span>Р</span></a><ul><li><a href="#prog">Программы</a></li><li><a href="#sched">Расписание</a></li><li><a href="#offer">Цены</a></li></ul><a href="#offer" class="btn btn-f" style="padding:12px 20px">Хочу на пробную</a></nav>
+<nav><a href="#" class="logo">ЖА<span>Р</span></a><ul><li><a href="#prog">Программы</a></li><li><a href="#sched">Расписание</a></li><li><a href="#prices">Цены</a></li></ul><a href="#offer" class="btn btn-f" style="padding:12px 20px">Бесплатная тренировка</a></nav>
 <div class="hero">
   <div>
-    <h1>Минус 5 кг <span>за 30 дней</span><span class="out">или вернём деньги</span></h1>
-    <p>Функциональные тренировки в мини-группах до 8 человек. Тренер видит каждого, программа питания включена в абонемент.</p>
-    <div class="cta"><a href="#offer" class="btn btn-f">Пробная неделя · 490 ₽</a><a href="#sched" class="btn btn-o">Расписание</a></div>
+    <h1>Минус 5 кг <span>за 30 дней</span><span class="out">в группе до 8 человек</span></h1>
+    <p>Фитнес-студия функционального тренинга в Сочи. Тренер видит каждого, программа питания включена в абонемент. Первая тренировка бесплатно, без обязательств.</p>
+    <div class="cta"><a href="#offer" class="btn btn-f">Бесплатная тренировка</a><a href="#sched" class="btn btn-o">Расписание</a></div>
   </div>
   <div class="pic"><img src="../../assets/img/fitness.png" alt="Тренировка с гирей в студии" onerror="this.remove()">
     <div class="st"><b>−6,3 кг</b><span>средний результат за 30 дней</span></div></div>
@@ -105,18 +118,38 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 </div></section>
 
 <section id="sched" style="padding-top:0"><div class="wrap">
-  <div class="h"><h2>Расписание</h2><p>Нажми «Записаться», чтобы забронировать место на пробной тренировке.</p></div>
+  <div class="h"><h2>Расписание</h2><p>Нажми «Записаться», чтобы забронировать место на бесплатной тренировке.</p></div>
   <div class="sched"><div class="days" id="days"></div><div id="slots"></div></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="h"><h2>Тренеры</h2><p>Каждый тренер сертифицирован и ведёт не больше 8 человек за раз.</p></div>
+  <div class="coaches">
+    <div><i style="background:linear-gradient(135deg,#ff5a1f,#7a1f05)">О</i><b>Ольга</b><span>Жиросжигание · 9 лет · КМС по лёгкой атлетике</span></div>
+    <div><i style="background:linear-gradient(135deg,#ffb21f,#8a4b00)">А</i><b>Артур</b><span>Сила · 7 лет · мастер спорта по гиревому спорту</span></div>
+    <div><i style="background:linear-gradient(135deg,#ff7a1f,#5a1a00)">Р</i><b>Руслан</b><span>Бокс · 11 лет · КМС по боксу</span></div>
+    <div><i style="background:linear-gradient(135deg,#ffd08a,#a35a12)">М</i><b>Мария</b><span>Стретчинг · 6 лет · сертификат йога-альянса</span></div>
+  </div>
+</div></section>
+
+<section id="prices" style="padding-top:0"><div class="wrap">
+  <div class="h"><h2>Начни <span>без риска</span></h2><p>Сначала попробуй бесплатно, потом решай. Никаких годовых контрактов.</p></div>
+  <div class="ladder">
+    <div class="st1"><small>Шаг 1</small><h3>Первая тренировка</h3><b>0 ₽</b><p>Знакомство с тренером, замеры InBody, подбор программы.</p></div>
+    <div class="st1"><small>Шаг 2</small><h3>Гостевая неделя</h3><b>990 ₽</b><p>Безлимит на 7 дней, все направления и консультация по питанию.</p></div>
+    <div class="st1 top"><small>Шаг 3 · выгодно</small><h3>Первый месяц</h3><b>4 900 ₽ <s>6 900 ₽</s></b><p>Безлимит, план питания и чат с тренером. Цена только после пробной.</p></div>
+  </div>
 </div></section>
 
 <section id="offer" style="padding-top:0"><div class="wrap">
   <div class="offer">
-    <div><h2>Пробная неделя</h2><p>Безлимит тренировок на 7 дней, замеры состава тела и консультация по питанию. Предложение сгорает через:</p>
+    <div><h2>Бесплатная тренировка</h2><p>Запишись, и тренер позвонит, чтобы подобрать время и направление. Набор в группы этого месяца закрывается через:</p>
       <div class="timer"><div><b id="th">00</b><span>часов</span></div><div><b id="tm">00</b><span>минут</span></div><div><b id="ts">00</b><span>секунд</span></div></div></div>
-    <form id="f"><div class="pr"><b>490 ₽</b><s>3 500 ₽</s></div><input required placeholder="Имя"><input required type="tel" placeholder="+7 (___) ___-__-__"><button class="btn btn-f">Забрать пробную неделю</button><div class="ok" id="ok">Это демо: заявка не отправлена. В рабочей версии лид из рекламы падает в CRM, а клиент получает приглашение в Telegram-бота.</div></form>
+    <form id="f"><div class="pr"><b>0 ₽</b><s>1 200 ₽</s></div><input required placeholder="Имя"><input required type="tel" placeholder="+7 (___) ___-__-__"><button class="btn btn-f">Записаться бесплатно</button><div class="ok" id="ok">Это демо: заявка не отправлена. В рабочей версии лид из рекламы падает в CRM, а клиент получает приглашение в Telegram-бота.</div></form>
   </div>
 </div></section>
 
+<a href="#offer" class="btn btn-f mcta">Бесплатная тренировка</a>
 <footer><div class="wrap"><span>© ЖАР, 2026 · концепт · Сочи, ул. Спортивная, 3</span><span>Разработка и воронка: <a href="../../">NS</a></span></div></footer>
 
 <script>
