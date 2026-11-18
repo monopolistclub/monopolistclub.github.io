@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ЖАР: фитнес-студия</title>
-<meta name="description" content="Фитнес-студия функционального тренинга в Сочи. Первая тренировка бесплатно.">
+<meta name="description" content="Фитнес-студия функционального тренинга. Первая тренировка бесплатно.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -68,7 +68,8 @@ section{padding:100px 0}
 @media(max-width:860px){.offer{grid-template-columns:1fr}}
 .coaches{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .coaches div{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px}
-.coaches i{display:grid;place-items:center;aspect-ratio:1/1;border-radius:14px;font:700 54px Oswald;font-style:normal;margin-bottom:16px;color:#000}
+.coaches i{display:grid;place-items:center;aspect-ratio:1/1;border-radius:14px;font:700 54px Oswald;font-style:normal;margin-bottom:16px;color:#000;position:relative;overflow:hidden}
+.coaches i img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .coaches b{display:block;font-size:19px}.coaches span{color:var(--muted);font-size:14px}
 @media(max-width:900px){.coaches{grid-template-columns:1fr 1fr}}
 .ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
@@ -90,7 +91,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 <div class="hero">
   <div>
     <h1>Минус 5 кг <span>за 30 дней</span><span class="out">в группе до 8 человек</span></h1>
-    <p>Фитнес-студия функционального тренинга в Сочи. Тренер видит каждого, программа питания включена в абонемент. Первая тренировка бесплатно, без обязательств.</p>
+    <p>Фитнес-студия функционального тренинга. Тренер видит каждого, программа питания включена в абонемент. Первая тренировка бесплатно, без обязательств.</p>
     <div class="cta"><a href="#offer" class="btn btn-f">Бесплатная тренировка</a><a href="#sched" class="btn btn-o">Расписание</a></div>
   </div>
   <div class="pic"><img src="../../assets/img/fitness.jpg" alt="Тренировка с гирей в студии" onerror="this.remove()">
@@ -125,10 +126,10 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 <section style="padding-top:0"><div class="wrap">
   <div class="h"><h2>Тренеры</h2><p>Каждый тренер сертифицирован и ведёт не больше 8 человек за раз.</p></div>
   <div class="coaches">
-    <div><i style="background:linear-gradient(135deg,#ff5a1f,#7a1f05)">О</i><b>Ольга</b><span>Жиросжигание · 9 лет · КМС по лёгкой атлетике</span></div>
-    <div><i style="background:linear-gradient(135deg,#ffb21f,#8a4b00)">А</i><b>Артур</b><span>Сила · 7 лет · мастер спорта по гиревому спорту</span></div>
-    <div><i style="background:linear-gradient(135deg,#ff7a1f,#5a1a00)">Р</i><b>Руслан</b><span>Бокс · 11 лет · КМС по боксу</span></div>
-    <div><i style="background:linear-gradient(135deg,#ffd08a,#a35a12)">М</i><b>Мария</b><span>Стретчинг · 6 лет · сертификат йога-альянса</span></div>
+    <div><i style="background:linear-gradient(135deg,#ff5a1f,#7a1f05)">О<img src="../../assets/img/coach1.jpg" alt="Тренер Ольга" loading="lazy" onerror="this.remove()"></i><b>Ольга</b><span>Жиросжигание · 9 лет · КМС по лёгкой атлетике</span></div>
+    <div><i style="background:linear-gradient(135deg,#ffb21f,#8a4b00)">А<img src="../../assets/img/coach2.jpg" alt="Тренер Артур" loading="lazy" onerror="this.remove()"></i><b>Артур</b><span>Сила · 7 лет · мастер спорта по гиревому спорту</span></div>
+    <div><i style="background:linear-gradient(135deg,#ff7a1f,#5a1a00)">Р<img src="../../assets/img/coach3.jpg" alt="Тренер Руслан" loading="lazy" onerror="this.remove()"></i><b>Руслан</b><span>Бокс · 11 лет · КМС по боксу</span></div>
+    <div><i style="background:linear-gradient(135deg,#ffd08a,#a35a12)">М<img src="../../assets/img/coach4.jpg" alt="Тренер Мария" loading="lazy" onerror="this.remove()"></i><b>Мария</b><span>Стретчинг · 6 лет · сертификат йога-альянса</span></div>
   </div>
 </div></section>
 
@@ -150,7 +151,7 @@ footer{padding:40px 0;color:var(--muted);font-size:14px;border-top:1px solid var
 </div></section>
 
 <a href="#offer" class="btn btn-f mcta">Бесплатная тренировка</a>
-<footer><div class="wrap"><span>© ЖАР, 2026 · концепт · Сочи, ул. Спортивная, 3</span><span>Разработка и воронка: <a href="../../">Monopolist club</a></span></div></footer>
+<footer><div class="wrap"><span>© ЖАР, 2026 · концепт · ул. Спортивная, 3</span><span>Разработка и воронка: <a href="../../">Monopolist club</a></span></div></footer>
 
 <script>
 const D=["Пн","Вт","Ср","Чт","Пт","Сб","Вс"],S=[["07:00","Жиросжигание","Тренер Ольга",3],["09:30","Стретчинг","Тренер Мария",5],["12:00","Сила","Тренер Артур",2],["18:30","Бокс","Тренер Руслан",1],["20:00","Жиросжигание","Тренер Ольга",4]];

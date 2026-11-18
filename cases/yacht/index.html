@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Северный ветер: яхты в Сочи</title>
-<meta name="description" content="Аренда парусных и моторных яхт в Сочи с капитаном. Закаты, дельфины, праздники на воде.">
+<title>Северный ветер: аренда яхт</title>
+<meta name="description" content="Аренда парусных и моторных яхт с капитаном. Закаты, дельфины, праздники на воде.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -42,6 +42,7 @@ section{padding:100px 0}
 .boat:hover,.boat.sel{border-color:var(--gold)}
 .boat .ph{aspect-ratio:4/3;display:grid;place-items:center;position:relative;overflow:hidden}
 .boat .ph svg{width:70%;opacity:.95}
+.boat .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .boat .ph b{position:absolute;top:14px;left:14px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;background:rgba(7,20,42,.7);padding:6px 10px;color:var(--gold2)}
 .boat .in{padding:24px}.boat h3{font-size:30px}.boat ul{list-style:none;display:flex;gap:16px;color:var(--muted);font-size:14px;margin:8px 0 16px;flex-wrap:wrap}
 .boat .pr{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #1c3256;padding-top:16px}.boat .pr b{font-size:20px;color:var(--gold2)}
@@ -79,10 +80,10 @@ footer{border-top:1px solid #1c3256;padding:40px 0;color:var(--muted);font-size:
 <body>
 <div class="demo">Это концепт-лендинг из портфолио Monopolist club. <a href="../../#work">← Все работы</a></div>
 <header class="hero">
-  <img src="../../assets/img/yacht.jpg" alt="Парусная яхта на закате у берегов Сочи" onerror="this.remove()">
+  <img src="../../assets/img/yacht.jpg" alt="Парусная яхта на закате у побережья" onerror="this.remove()">
   <div class="wrap" style="width:100%"><nav><a class="logo" href="#">Северный <span>ветер</span></a><ul><li><a href="#fleet">Флот</a></li><li><a href="#routes">Маршруты</a></li><li><a href="#book">Бронь</a></li></ul><a href="#book" class="btn">Забронировать</a></nav></div>
   <div class="wrap hc">
-    <small>Имеретинский порт · Олимпийский парк</small>
+    <small>Яхт-клуб · Черноморское побережье</small>
     <h1>Море, которое <em>принадлежит</em> только вам</h1>
     <p>Частные прогулки на парусных и моторных яхтах с капитаном. Закаты, дельфины, предложения руки и сердца, дни рождения на воде.</p>
     <div class="cta"><a href="#book" class="btn btn-g">Рассчитать прогулку</a><a href="#fleet" class="btn">Смотреть флот</a></div>
@@ -115,9 +116,9 @@ footer{border-top:1px solid #1c3256;padding:40px 0;color:var(--muted);font-size:
 <section id="routes" style="background:#091830"><div class="wrap">
   <div class="h"><div><small>Маршруты</small><h2>Куда пойдём</h2></div></div>
   <div class="routes">
-    <div class="route"><i>1 час</i><h3>Закат у Олимпийского парка</h3><p>Классика: выход в открытое море на закате и вид на Кавказский хребет. Идеально для свидания.</p></div>
+    <div class="route"><i>1 час</i><h3>Закат в открытом море</h3><p>Классика: выход в открытое море на закате и вид на горы. Идеально для свидания.</p></div>
     <div class="route"><i>2 часа</i><h3>Дельфинья тропа</h3><p>Уходим к местам, где чаще всего встречаются стаи афалин. Купание в открытом море.</p></div>
-    <div class="route"><i>4 часа</i><h3>Вдоль Адлера</h3><p>Переход вдоль побережья к устью Псоу и обратно. Рыбалка, обед на борту.</p></div>
+    <div class="route"><i>4 часа</i><h3>Вдоль побережья</h3><p>Переход вдоль побережья к диким пляжам и обратно. Рыбалка, обед на борту.</p></div>
   </div>
 </div></section>
 
@@ -153,9 +154,9 @@ footer{border-top:1px solid #1c3256;padding:40px 0;color:var(--muted);font-size:
 <script>
 const sail='<svg viewBox="0 0 200 140"><path d="M100 10v90" stroke="#e6c88a" stroke-width="2"/><path d="M102 14c30 26 46 56 50 82h-50z" fill="#f3ede2"/><path d="M98 24c-20 22-34 46-40 72h40z" fill="#c9d4e4"/><path d="M30 104h140l-18 18H52z" fill="#e6c88a"/><path d="M0 128c20-6 40 6 60 0s40-6 60 0 40 6 80 0v12H0z" fill="#1c3a66"/></svg>';
 const motor='<svg viewBox="0 0 200 140"><path d="M20 96h160l-24 24H46z" fill="#f3ede2"/><path d="M50 96l20-26h70l20 26z" fill="#c9d4e4"/><path d="M78 74h50l10 16H70z" fill="#0c1e3a"/><path d="M100 70V52" stroke="#e6c88a" stroke-width="2"/><path d="M0 128c20-6 40 6 60 0s40-6 60 0 40 6 80 0v12H0z" fill="#1c3a66"/></svg>';
-const B=[["Ассоль","Парусная · 12 м",8,9000,sail,"Хит"],["Grand Blue","Моторная · 14 м",10,16000,motor,"Премиум"],["Аврора","Катамаран · 13 м",12,13000,sail,"Для компаний"]];
+const B=[["Ассоль","Парусная · 12 м",8,9000,sail,"Хит","yacht_sail"],["Grand Blue","Моторная · 14 м",10,16000,motor,"Премиум","yacht_motor"],["Аврора","Катамаран · 13 м",12,13000,sail,"Для компаний","yacht_cat"]];
 const fl=document.getElementById('fleetList'),sel=document.getElementById('boat');
-fl.innerHTML=B.map((b,i)=>`<div class="boat${i?'':' sel'}" data-i="${i}"><div class="ph" style="background:linear-gradient(180deg,#183461,#0c1e3a)">${b[4]}<b>${b[5]}</b></div><div class="in"><h3>${b[0]}</h3><ul><li>${b[1]}</li><li>до ${b[2]} гостей</li></ul><div class="pr"><span>от</span><b>${b[3].toLocaleString('ru')} ₽ / час</b></div></div></div>`).join('');
+fl.innerHTML=B.map((b,i)=>`<div class="boat${i?'':' sel'}" data-i="${i}"><div class="ph" style="background:linear-gradient(180deg,#183461,#0c1e3a)">${b[4]}<img src="../../assets/img/${b[6]}.jpg" alt="Яхта ${b[0]}" loading="lazy" onerror="this.remove()"><b>${b[5]}</b></div><div class="in"><h3>${b[0]}</h3><ul><li>${b[1]}</li><li>до ${b[2]} гостей</li></ul><div class="pr"><span>от</span><b>${b[3].toLocaleString('ru')} ₽ / час</b></div></div></div>`).join('');
 sel.innerHTML=B.map((b,i)=>`<option value="${i}">${b[0]} · ${b[3].toLocaleString('ru')} ₽/ч</option>`).join('');
 fl.onclick=e=>{const c=e.target.closest('.boat');if(!c)return;sel.value=c.dataset.i;upd();document.getElementById('book').scrollIntoView()};
 function upd(){const b=B[sel.value],h=+hours.value;hv.textContent=h;document.querySelectorAll('.boat').forEach((x,i)=>x.classList.toggle('sel',i==sel.value));

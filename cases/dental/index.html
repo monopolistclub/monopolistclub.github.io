@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Белый берег: стоматология</title>
-<meta name="description" content="Стоматологическая клиника в Сочи: лечение без боли, имплантация, виниры, рассрочка 0%.">
+<meta name="description" content="Стоматологическая клиника: лечение без боли, имплантация, виниры, рассрочка 0%.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -51,7 +51,8 @@ section{padding:90px 0}
 @media(max-width:640px){.row{grid-template-columns:1fr;gap:6px}}
 .docs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .doc{background:#fff;border-radius:24px;border:1px solid var(--line);padding:26px}
-.doc .ph{height:180px;border-radius:18px;margin-bottom:18px;display:grid;place-items:center;font-size:54px;font-weight:800;color:#fff}
+.doc .ph{height:240px;border-radius:18px;margin-bottom:18px;display:grid;place-items:center;font-size:54px;font-weight:800;color:#fff;position:relative;overflow:hidden}
+.doc .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%}
 .doc h3{font-size:19px}.doc span{color:var(--teal);font-weight:600;font-size:14px}.doc p{color:var(--muted);font-size:14px;margin-top:8px}
 @media(max-width:860px){.docs{grid-template-columns:1fr}}
 .quiz{background:linear-gradient(135deg,#0f9488,#0e5f59);border-radius:36px;padding:clamp(30px,5vw,60px);color:#fff;display:grid;grid-template-columns:1fr 1.1fr;gap:40px}
@@ -79,10 +80,10 @@ footer{background:var(--ink);color:#9fc2bd;padding:40px 0;font-size:14px}footer 
 <body>
 <div class="demo">Это концепт-лендинг из портфолио Monopolist club. <a href="../../#work">← Все работы</a></div>
 <div class="wrap">
-<nav><a class="logo" href="#"><i>Б</i>Белый берег</a><ul><li><a href="#price">Цены</a></li><li><a href="#docs">Врачи</a></li><li><a href="#quiz">Расчёт</a></li><li><a href="#faq">Вопросы</a></li></ul><div class="tel">+7 (862) 000-00-00<small>ежедневно 9:00–21:00</small></div></nav>
+<nav><a class="logo" href="#"><i>Б</i>Белый берег</a><ul><li><a href="#price">Цены</a></li><li><a href="#docs">Врачи</a></li><li><a href="#quiz">Расчёт</a></li><li><a href="#faq">Вопросы</a></li></ul><div class="tel">+7 (800) 000-00-00<small>ежедневно 9:00–21:00</small></div></nav>
 <div class="hero">
   <div>
-    <span class="tagline">✓ Лицензия · 12 лет в Сочи</span>
+    <span class="tagline">✓ Лицензия · 12 лет работы</span>
     <h1>Лечим зубы <span>без боли</span> и без сюрпризов в чеке</h1>
     <p>Фиксируем стоимость лечения в договоре до начала работ. Если появятся доплаты, их берём на себя.</p>
     <div class="cta"><a href="#quiz" class="btn btn-t">Рассчитать стоимость</a><a href="#price" class="btn btn-w">Смотреть цены</a></div>
@@ -117,9 +118,9 @@ footer{background:var(--ink);color:#9fc2bd;padding:40px 0;font-size:14px}footer 
 <section id="docs" style="background:#fff"><div class="wrap">
   <div class="h"><h2>Врачи, которым доверяют</h2></div>
   <div class="docs">
-    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#5eead4,#0f766e)">АК</div><h3>Алексей Ковалёв</h3><span>Хирург-имплантолог · стаж 15 лет</span><p>Более 3 000 установленных имплантов, обучение в Германии.</p><div class="rt"><b>4,9 ★</b> 312 отзывов на ПроДокторов</div></div>
-    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#99f6e4,#14b8a6)">ЕС</div><h3>Елена Смирнова</h3><span>Терапевт · стаж 11 лет</span><p>Лечение под микроскопом, работает с тревожными пациентами.</p><div class="rt"><b>5,0 ★</b> 184 отзыва на ПроДокторов</div></div>
-    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#a5f3fc,#0e7490)">ИМ</div><h3>Игорь Мартынов</h3><span>Ортопед · стаж 13 лет</span><p>Виниры и коронки, цифровое планирование улыбки.</p><div class="rt"><b>4,9 ★</b> 241 отзыв на ПроДокторов</div></div>
+    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#5eead4,#0f766e)">АК<img src="../../assets/img/doc1.jpg" alt="Алексей Ковалёв" loading="lazy" onerror="this.remove()"></div><h3>Алексей Ковалёв</h3><span>Хирург-имплантолог · стаж 15 лет</span><p>Более 3 000 установленных имплантов, обучение в Германии.</p><div class="rt"><b>4,9 ★</b> 312 отзывов на ПроДокторов</div></div>
+    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#99f6e4,#14b8a6)">ЕС<img src="../../assets/img/doc2.jpg" alt="Елена Смирнова" loading="lazy" onerror="this.remove()"></div><h3>Елена Смирнова</h3><span>Терапевт · стаж 11 лет</span><p>Лечение под микроскопом, работает с тревожными пациентами.</p><div class="rt"><b>5,0 ★</b> 184 отзыва на ПроДокторов</div></div>
+    <div class="doc"><div class="ph" style="background:linear-gradient(135deg,#a5f3fc,#0e7490)">ИМ<img src="../../assets/img/doc3.jpg" alt="Игорь Мартынов" loading="lazy" onerror="this.remove()"></div><h3>Игорь Мартынов</h3><span>Ортопед · стаж 13 лет</span><p>Виниры и коронки, цифровое планирование улыбки.</p><div class="rt"><b>4,9 ★</b> 241 отзыв на ПроДокторов</div></div>
   </div>
   <div class="revs">
     <div><div class="src">Яндекс Карты · ★★★★★</div><p>«Боялась стоматологов с детства. Елена Сергеевна всё объясняла, не было ни капли боли. Теперь хожу без страха».</p><span>Ирина, лечение кариеса</span></div>
@@ -143,7 +144,7 @@ footer{background:var(--ink);color:#9fc2bd;padding:40px 0;font-size:14px}footer 
   <details><summary>Лечите детей?</summary><p>Да, с 3 лет. Есть детский врач и игровая зона, при необходимости лечение во сне.</p></details>
 </div></section>
 
-<div class="mcta"><a href="tel:+78620000000" style="background:#fff;border:1px solid #e0eeec">📞 Позвонить</a><a href="#quiz" style="background:#0f9488;color:#fff">Записаться</a></div>
+<div class="mcta"><a href="tel:+78000000000" style="background:#fff;border:1px solid #e0eeec">📞 Позвонить</a><a href="#quiz" style="background:#0f9488;color:#fff">Записаться</a></div>
 <footer><div class="wrap"><span>© Белый берег, 2026 · концепт. Имеются противопоказания, необходима консультация специалиста.</span><span>Разработка: <a href="../../">Monopolist club</a></span></div></footer>
 
 <script>

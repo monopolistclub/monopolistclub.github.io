@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Говори: онлайн-школа английского</title>
+<meta name="description" content="Онлайн-школа английского для взрослых: разговорная практика с первого урока, тест уровня за 2 минуты, бесплатный пробный урок.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfaff;--ink:#17123a;--muted:#6a6788;--violet:#5b3df5;--violet2:#7c63ff;--sun:#ffd23f;--pink:#ff6fa8;--line:#e7e4f7;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Rubik,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+h1,h2,h3{line-height:1.08;letter-spacing:-.02em;font-weight:800}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.demo{background:var(--ink);color:#c9c4f2;font-size:13px;text-align:center;padding:8px 12px}.demo a{color:var(--sun);font-weight:700}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.logo{font-weight:800;font-size:26px;display:flex;align-items:center;gap:8px}.logo i{font-style:normal;background:var(--violet);color:#fff;border-radius:12px 12px 12px 2px;padding:2px 10px;font-size:20px}
+nav ul{display:flex;gap:26px;list-style:none;font-weight:500;color:var(--muted)}
+@media(max-width:820px){nav ul{display:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:16px 28px;border-radius:16px;font:700 16px Rubik;border:0;cursor:pointer;transition:.2s}
+.btn-v{background:var(--violet);color:#fff;box-shadow:0 8px 0 #3b22c4}.btn-v:hover{transform:translateY(2px);box-shadow:0 6px 0 #3b22c4}
+.btn-s{background:var(--sun);color:var(--ink);box-shadow:0 8px 0 #d9ab00}.btn-s:hover{transform:translateY(2px);box-shadow:0 6px 0 #d9ab00}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding:30px 0 80px}
+.badge{display:inline-flex;gap:8px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;font-weight:500}
+.hero h1{font-size:clamp(40px,6vw,76px);margin:20px 0}
+.hl{background:var(--sun);padding:0 10px;border-radius:12px;display:inline-block;transform:rotate(-2deg)}
+.hero p{font-size:19px;color:var(--muted);max-width:520px;margin-bottom:32px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero .proof{display:flex;gap:12px;align-items:center;margin-top:30px;font-size:14px;color:var(--muted)}
+.av{display:flex}.av span{width:36px;height:36px;border-radius:50%;border:3px solid var(--bg);margin-left:-10px;display:grid;place-items:center;font-size:13px;font-weight:700;color:#fff}.av span:first-child{margin-left:0}
+.pic{position:relative}
+.pic .ph{border-radius:36px;overflow:hidden;aspect-ratio:1/1.05;background:linear-gradient(135deg,var(--violet2),var(--pink))}
+.pic .ph img{width:100%;height:100%;object-fit:cover}
+.bubble{position:absolute;background:#fff;border-radius:20px 20px 20px 4px;padding:12px 16px;box-shadow:0 20px 40px -20px rgba(23,18,58,.4);font-weight:600;font-size:15px}
+.b1{top:24px;left:-16px}.b2{bottom:40px;right:-10px;border-radius:20px 20px 4px 20px;background:var(--violet);color:#fff}
+.b3{bottom:-14px;left:30px;background:var(--sun)}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.b1{left:10px}.b2{right:10px}}
+section{padding:90px 0}
+.h{text-align:center;max-width:700px;margin:0 auto 48px}.h h2{font-size:clamp(32px,4.6vw,54px)}.h p{color:var(--muted);margin-top:12px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.how div{background:#fff;border:1px solid var(--line);border-radius:28px;padding:32px}.how b{font-size:46px;font-weight:800;color:var(--violet);line-height:1}.how h3{font-size:22px;margin:14px 0 8px}.how p{color:var(--muted);font-size:16px}
+.how div:nth-child(2){background:var(--violet);color:#fff;border-color:var(--violet)}.how div:nth-child(2) b{color:var(--sun)}.how div:nth-child(2) p{color:#dcd5ff}
+@media(max-width:860px){.how{grid-template-columns:1fr}}
+.test{background:var(--ink);color:#fff;border-radius:40px;padding:clamp(28px,5vw,60px);display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:center}
+.test h2{font-size:clamp(30px,4vw,48px)}.test>div>p{color:#c9c4f2;margin-top:14px}
+.tbox{background:#fff;color:var(--ink);border-radius:28px;padding:30px;min-height:340px}
+.prog{display:flex;gap:6px;margin-bottom:22px}.prog i{flex:1;height:8px;border-radius:9px;background:var(--line)}.prog i.on{background:var(--violet)}
+.tbox small{color:var(--muted);font-weight:500}.tbox h3{font-size:24px;margin:8px 0 20px;font-weight:700}
+.tbox h3 u{text-decoration:none;border-bottom:3px dashed var(--violet)}
+.ans{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ans button{padding:16px;border-radius:16px;border:2px solid var(--line);background:var(--bg);font:600 17px Rubik;cursor:pointer;color:var(--ink)}
+.ans button:hover{border-color:var(--violet)}
+.ans button.ok{background:#e6f9ee;border-color:#2fbf71}.ans button.no{background:#ffe9ef;border-color:var(--pink)}
+.lvl{font-size:64px;font-weight:800;color:var(--violet);line-height:1}
+.tbox input{width:100%;padding:15px;border-radius:14px;border:2px solid var(--line);font:16px Rubik;margin-bottom:10px}
+@media(max-width:900px){.test{grid-template-columns:1fr}}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.plan{background:#fff;border:2px solid var(--line);border-radius:30px;padding:32px;display:flex;flex-direction:column;position:relative}
+.plan.top{border-color:var(--violet);box-shadow:0 30px 60px -30px rgba(91,61,245,.5)}
+.plan .fl{position:absolute;top:-14px;right:24px;background:var(--pink);color:#fff;font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px}
+.plan h3{font-size:24px}.plan .d{color:var(--muted);font-size:15px;margin:6px 0 18px}
+.plan .pr{font-size:40px;font-weight:800}.plan .pr small{font-size:16px;color:var(--muted);font-weight:500}
+.plan .per{color:var(--muted);font-size:14px;margin-bottom:18px}
+.plan ul{list-style:none;flex:1;margin-bottom:24px}.plan li{padding:7px 0 7px 30px;position:relative}.plan li:before{content:"✓";position:absolute;left:0;width:22px;height:22px;border-radius:50%;background:#efeaff;color:var(--violet);display:grid;place-items:center;font-size:13px;font-weight:800;top:9px}
+@media(max-width:900px){.plans{grid-template-columns:1fr}}
+.teach{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:900px;margin:0 auto}
+.t{background:#fff;border:1px solid var(--line);border-radius:28px;padding:22px;display:flex;gap:20px;align-items:center}
+.t .ph{width:120px;height:120px;border-radius:24px;overflow:hidden;flex:none;background:linear-gradient(135deg,var(--violet2),var(--pink));display:grid;place-items:center;color:#fff;font-size:40px;font-weight:800}
+.t .ph img{width:100%;height:100%;object-fit:cover}
+.t h3{font-size:20px}.t span{color:var(--violet);font-weight:600;font-size:14px}.t p{color:var(--muted);font-size:15px;margin-top:6px}
+@media(max-width:760px){.teach{grid-template-columns:1fr}}
+.faq{max-width:820px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 24px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";color:var(--violet);font-size:24px;line-height:1}.faq details[open] summary:after{content:"−"}.faq p{color:var(--muted);margin-top:10px}
+.final{background:linear-gradient(135deg,var(--violet),#3b22c4);color:#fff;border-radius:40px;padding:clamp(30px,5vw,60px);display:grid;grid-template-columns:1.2fr 1fr;gap:30px;align-items:center}
+.final h2{font-size:clamp(30px,4.4vw,52px)}.final p{color:#dcd5ff;margin-top:12px}
+.final form{display:grid;gap:10px}.final input{padding:16px;border-radius:14px;border:0;font:16px Rubik}
+.okm{display:none;padding:12px;border-radius:12px;background:rgba(255,255,255,.15);font-size:14px}
+@media(max-width:860px){.final{grid-template-columns:1fr}}
+.mcta{display:none}
+@media(max-width:700px){.mcta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30}footer{padding-bottom:90px}}
+footer{padding:36px 0;color:var(--muted);font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}footer a{color:var(--violet);font-weight:600}
+</style>
+</head>
+<body>
+<div class="demo">Это концепт-лендинг из портфолио Monopolist club. <a href="../../#work">← Все работы</a></div>
+<div class="wrap">
+<nav><a class="logo" href="#"><i>Hi!</i>Говори</a><ul><li><a href="#how">Как учимся</a></li><li><a href="#test">Тест уровня</a></li><li><a href="#plans">Цены</a></li><li><a href="#faq">Вопросы</a></li></ul><a href="#final" class="btn btn-v" style="padding:12px 20px">Пробный урок</a></nav>
+<div class="hero">
+  <div>
+    <span class="badge">🎧 Онлайн · для взрослых · с нуля до C1</span>
+    <h1>Заговорите на английском <span class="hl">за 3 месяца</span></h1>
+    <p>Разговорная практика с первого урока: 80% времени говорите вы, а не преподаватель. Занятия по 50 минут в удобное время, с телефона или ноутбука.</p>
+    <div class="cta"><a href="#test" class="btn btn-s">Узнать свой уровень</a><a href="#final" class="btn btn-v">Пробный урок бесплатно</a></div>
+    <div class="proof"><div class="av"><span style="background:#5b3df5">А</span><span style="background:#ff6fa8">М</span><span style="background:#2fbf71">Д</span><span style="background:#ffb020">+</span></div>12 400 студентов · 4,9 ★ на Отзовике</div>
+  </div>
+  <div class="pic"><div class="ph"><img src="../../assets/img/school.jpg" alt="Девушка занимается английским онлайн" onerror="this.remove()"></div>
+    <div class="bubble b1">How was your weekend? 👋</div><div class="bubble b2">It was amazing, thanks!</div><div class="bubble b3">🔥 21 день подряд</div></div>
+</div>
+</div>
+
+<section id="how" style="padding-top:20px"><div class="wrap">
+  <div class="h"><h2>Как проходит обучение</h2><p>Никакой зубрёжки правил ради правил: только то, что нужно для живого общения.</p></div>
+  <div class="how">
+    <div><b>1</b><h3>Тест и цель</h3><p>Определяем уровень и цель: работа, переезд, путешествия или собеседование.</p></div>
+    <div><b>2</b><h3>Уроки с преподавателем</h3><p>2–3 занятия в неделю 1-на-1. Темы из вашей жизни, а не из учебника 2005 года.</p></div>
+    <div><b>3</b><h3>Практика каждый день</h3><p>Telegram-бот присылает 10-минутные задания и напоминает о повторении слов.</p></div>
+  </div>
+</div></section>
+
+<section id="test" style="padding-top:0"><div class="wrap">
+  <div class="test">
+    <div><h2>Тест уровня за 2 минуты</h2><p>5 вопросов, ответ сразу. В конце покажем ваш уровень и сколько месяцев нужно до следующего.</p></div>
+    <div class="tbox" id="tbox"></div>
+  </div>
+</div></section>
+
+<section id="plans" style="padding-top:0"><div class="wrap">
+  <div class="h"><h2>Тарифы</h2><p>Платите пакетами, переносите уроки бесплатно за 4 часа. Первый урок бесплатно.</p></div>
+  <div class="plans">
+    <div class="plan"><h3>Старт</h3><p class="d">Попробовать формат</p><div class="pr">1 290 ₽ <small>/ урок</small></div><div class="per">пакет 8 уроков · 10 320 ₽</div><ul><li>Уроки 1-на-1 по 50 минут</li><li>Telegram-бот с практикой</li><li>Чат с преподавателем</li></ul><a href="#final" class="btn btn-v" style="background:#efeaff;color:var(--violet);box-shadow:none">Выбрать</a></div>
+    <div class="plan top"><span class="fl">Выбирают 64%</span><h3>Разговорный</h3><p class="d">Заговорить за 3 месяца</p><div class="pr">1 090 ₽ <small>/ урок</small></div><div class="per">пакет 24 урока · 26 160 ₽</div><ul><li>Всё из «Старта»</li><li>Разговорный клуб 2 раза в неделю</li><li>Персональный план и отчёты</li><li>Рассрочка 0% на 6 месяцев</li></ul><a href="#final" class="btn btn-v">Выбрать</a></div>
+    <div class="plan"><h3>Карьера</h3><p class="d">Работа и собеседования</p><div class="pr">1 490 ₽ <small>/ урок</small></div><div class="per">пакет 16 уроков · 23 840 ₽</div><ul><li>Преподаватель с опытом в IT/бизнесе</li><li>Пробное собеседование</li><li>Правка резюме и писем</li></ul><a href="#final" class="btn btn-v" style="background:#efeaff;color:var(--violet);box-shadow:none">Выбрать</a></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="h"><h2>Преподаватели</h2><p>Отбираем 1 из 20 кандидатов: сертификат CELTA или опыт от 5 лет.</p></div>
+  <div class="teach">
+    <div class="t"><div class="ph"><img src="../../assets/img/teacher1.jpg" alt="Преподаватель Анна" loading="lazy" onerror="this.remove()"></div><div><h3>Анна</h3><span>CELTA · 8 лет · разговорный</span><p>Жила 3 года в Лондоне. Помогает перестать бояться говорить.</p></div></div>
+    <div class="t"><div class="ph"><img src="../../assets/img/teacher2.jpg" alt="Преподаватель Максим" loading="lazy" onerror="this.remove()"></div><div><h3>Максим</h3><span>IELTS 8.5 · 6 лет · английский для IT</span><p>Бывший тимлид. Готовит к собеседованиям в международные компании.</p></div></div>
+  </div>
+</div></section>
+
+<section id="faq" style="padding-top:0"><div class="wrap faq">
+  <div class="h"><h2>Частые вопросы</h2></div>
+  <details><summary>Подойдёт, если я совсем с нуля?</summary><p>Да. Для нулевого уровня есть отдельная программа, первые уроки идут с русскоязычным преподавателем.</p></details>
+  <details><summary>Что, если пропущу урок?</summary><p>Перенос бесплатно, если предупредить за 4 часа. Пакет не сгорает 3 месяца.</p></details>
+  <details><summary>Есть ли возврат?</summary><p>Да, за неиспользованные уроки вернём деньги в течение 5 рабочих дней.</p></details>
+  <details><summary>Можно оплатить налоговым вычетом?</summary><p>У школы есть образовательная лицензия, поэтому можно вернуть 13% от стоимости обучения.</p></details>
+</div></section>
+
+<section id="final" style="padding-top:0"><div class="wrap">
+  <div class="final">
+    <div><h2>Первый урок бесплатно</h2><p>50 минут с преподавателем: определим уровень, составим план и поговорим на английском. Без обязательств.</p></div>
+    <form id="f"><input required placeholder="Имя"><input required type="tel" placeholder="Telegram или телефон"><button class="btn btn-s">Записаться на пробный урок</button><div class="okm" id="okm">Это демо: заявка не отправлена. В рабочей версии бот в Telegram сразу предлагает слоты, а результат теста попадает в CRM.</div></form>
+  </div>
+</div></section>
+
+<a href="#final" class="btn btn-v mcta">Пробный урок бесплатно</a>
+<footer><div class="wrap"><span>© Говори, 2026 · концепт</span><span>Разработка и воронка: <a href="../../">Monopolist club</a></span></div></footer>
+
+<script>
+const Q=[["I ___ from Russia.",["am","is","are","be"],0],["She ___ coffee every morning.",["drink","drinks","drinking","is drink"],1],["We ___ to Paris last year.",["go","have gone","went","were go"],2],["If I ___ more time, I would travel.",["have","had","will have","would have"],1],["By next year, I ___ here for a decade.",["will work","am working","will have been working","have worked"],2]];
+let i=0,sc=0;const tb=document.getElementById('tbox');
+const prog=()=>`<div class="prog">${Q.map((_,k)=>`<i class="${k<i?'on':''}"></i>`).join('')}</div>`;
+function r(){if(i<Q.length){const q=Q[i];tb.innerHTML=prog()+`<small>Вопрос ${i+1} из ${Q.length} · выберите вариант</small><h3>${q[0].replace('___','<u>&nbsp;?&nbsp;</u>')}</h3><div class="ans">${q[1].map((a,k)=>`<button data-k="${k}">${a}</button>`).join('')}</div>`;
+tb.querySelectorAll('.ans button').forEach(b=>b.onclick=()=>{const ok=+b.dataset.k===q[2];if(ok)sc++;b.classList.add(ok?'ok':'no');if(!ok)tb.querySelector(`[data-k="${q[2]}"]`).classList.add('ok');tb.querySelectorAll('.ans button').forEach(x=>x.disabled=true);setTimeout(()=>{i++;r()},650)})}
+else{const L=[["A0","Beginner",4],["A1","Elementary",3],["A2","Pre-Intermediate",3],["B1","Intermediate",4],["B2","Upper-Intermediate",5],["C1","Advanced",6]][sc];tb.innerHTML=prog()+`<small>Ваш примерный уровень</small><div class="lvl">${L[0]}</div><h3 style="margin-top:6px">${L[1]}: ${sc} из ${Q.length}</h3><p style="color:#6a6788;margin:-8px 0 18px">До следующего уровня около ${L[2]} месяцев при 2 уроках в неделю. Точнее определим на бесплатном уроке.</p><form id="tf"><input required placeholder="Telegram или телефон"><button class="btn btn-v" style="width:100%">Забрать план обучения</button></form>`;
+document.getElementById('tf').onsubmit=e=>{e.preventDefault();tb.innerHTML='<h3>Спасибо! 🎉</h3><p style="color:#6a6788">Это демо: заявка никуда не отправлена. В рабочей версии результат теста уходит в CRM, а бот присылает план обучения.</p>'}}}
+r();
+document.getElementById('f').onsubmit=e=>{e.preventDefault();okm.style.display='block'};
+</script>
+</body>
+</html>

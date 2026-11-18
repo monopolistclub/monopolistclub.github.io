@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Зерно и море: кофейня в Сочи</title>
-<meta name="description" content="Specialty-кофейня у моря в Сочи. Свежая обжарка, завтраки весь день, предзаказ кофе к выходу.">
+<title>Зерно и море: кофейня у моря</title>
+<meta name="description" content="Specialty-кофейня у моря. Свежая обжарка, завтраки весь день, предзаказ кофе к выходу.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
@@ -82,6 +82,11 @@ section{padding:90px 0}
 @media(max-width:860px){.loyal{grid-template-columns:1fr}}
 .bar{display:none}
 @media(max-width:700px){.bar.show{display:flex;position:fixed;left:10px;right:10px;bottom:10px;z-index:30;justify-content:space-between;align-items:center;background:var(--coffee);color:var(--cream);padding:14px 18px;border-radius:999px;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.35)}footer{padding-bottom:90px}}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.gal figure{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/3;background:linear-gradient(135deg,#e7d3bd,#c8864a)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:.5s}.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:14px;bottom:14px;background:var(--paper);padding:6px 12px;border-radius:999px;font-size:14px;font-weight:700}
+@media(max-width:760px){.gal{grid-template-columns:1fr}}
 footer{background:#1d120b;color:#c9b29d;padding:40px 0;font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}footer a{color:#f3b67a}
 </style>
 </head>
@@ -92,7 +97,7 @@ footer{background:#1d120b;color:#c9b29d;padding:40px 0;font-size:14px}footer .wr
 <div class="hero">
   <div>
     <h1>Кофе, ради которого <em>стоит</em> проснуться</h1>
-    <p>Specialty-кофейня в пяти минутах от набережной Сочи. Свежая обжарка каждую неделю, завтраки весь день и терраса с видом на море.</p>
+    <p>Specialty-кофейня в пяти минутах от набережной. Свежая обжарка каждую неделю, завтраки весь день и терраса с видом на море.</p>
     <div class="cta"><a href="#order" class="btn btn-d">Предзаказ без очереди</a><a href="#menu" class="btn btn-l">Смотреть меню</a></div>
     <div class="info"><div><b>07:30 — 22:00</b>каждый день</div><div><b>ул. Приморская, 12</b>Центральный район</div><div><b>4,9 ★</b>1 200+ отзывов</div></div>
   </div>
@@ -109,6 +114,7 @@ footer{background:#1d120b;color:#c9b29d;padding:40px 0;font-size:14px}footer .wr
     <div><i>🌊</i><h3>Терраса у моря</h3><p>12 столиков на свежем воздухе и пледы на прохладные вечера.</p></div>
     <div><i>💻</i><h3>Можно работать</h3><p>Быстрый Wi-Fi, розетки у каждого стола и тихий зал на втором этаже.</p></div>
   </div>
+  <div class="gal"><figure><img src="../../assets/img/food_syrniki.jpg" alt="Сырники со сметаной и ягодами" loading="lazy" onerror="this.remove()"><figcaption>Сырники · 340 ₽</figcaption></figure><figure><img src="../../assets/img/food_croissant.jpg" alt="Круассан и флэт уайт" loading="lazy" onerror="this.remove()"><figcaption>Круассан + флэт уайт · 390 ₽</figcaption></figure><figure><img src="../../assets/img/cafe_terrace.jpg" alt="Терраса кофейни вечером" loading="lazy" onerror="this.remove()"><figcaption>Терраса · до 22:00</figcaption></figure></div>
 </div></section>
 
 <section class="menu-sec" id="menu"><div class="wrap">
@@ -132,9 +138,9 @@ footer{background:#1d120b;color:#c9b29d;padding:40px 0;font-size:14px}footer .wr
   </div>
   <div class="where" id="where">
     <h3>Как нас найти</h3>
-    <p>📍 Сочи, ул. Приморская, 12. Вход со стороны парка.</p>
+    <p>📍 ул. Приморская, 12. Вход со стороны парка.</p>
     <p>🚗 Бесплатная парковка 30 минут для гостей.</p>
-    <p>📞 +7 (862) 000-00-00</p>
+    <p>📞 +7 (800) 000-00-00</p>
     <div class="map" role="img" aria-label="Схема расположения кофейни"></div>
   </div>
 </div></section>
@@ -152,7 +158,7 @@ footer{background:#1d120b;color:#c9b29d;padding:40px 0;font-size:14px}footer .wr
 <section style="padding-top:0"><div class="wrap">
   <div class="h"><h2>Что говорят гости</h2><p><b style="color:var(--coffee)">4,9 ★</b> на Яндекс Картах · <b style="color:var(--coffee)">4,9 ★</b> в 2ГИС · 1 200+ отзывов</p></div>
   <div class="rev">
-    <div><span class="st">★★★★★</span><p>«Лучший флэт уайт в Сочи. Беру каждое утро по дороге на работу через предзаказ».</p><span>Анна, Яндекс Карты</span></div>
+    <div><span class="st">★★★★★</span><p>«Лучший флэт уайт в городе. Беру каждое утро по дороге на работу через предзаказ».</p><span>Анна, Яндекс Карты</span></div>
     <div><span class="st">★★★★★</span><p>«Сырники как у бабушки, а вид с террасы просто бесценный. Приходим всей семьёй».</p><span>Дмитрий, 2ГИС</span></div>
     <div><span class="st">★★★★★</span><p>«Работаю тут удалённо по полдня. Тихо, вкусно, ребята-бариста знают по имени».</p><span>Мария, Google</span></div>
   </div>
