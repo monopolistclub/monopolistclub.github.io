@@ -87,7 +87,14 @@ section{padding:90px 0}
 .gal img{width:100%;height:100%;object-fit:cover;transition:.5s}.gal figure:hover img{transform:scale(1.05)}
 .gal figcaption{position:absolute;left:14px;bottom:14px;background:var(--paper);padding:6px 12px;border-radius:999px;font-size:14px;font-weight:700}
 @media(max-width:760px){.gal{grid-template-columns:1fr}}
+.loyal>*{min-width:0}
+@media(max-width:520px){.cups{gap:5px;padding:16px}.cups span{font-size:15px}}
 footer{background:#1d120b;color:#c9b29d;padding:40px 0;font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}footer a{color:#f3b67a}
+
+/* mobile polish */
+.mcta{transition:opacity .25s,transform .25s}
+.mcta.hide{opacity:0;pointer-events:none;transform:translateY(16px)}
+@media(max-width:520px){nav>.btn{padding:10px 16px;font-size:13px}.logo{white-space:nowrap;font-size:21px}.hero .cta .btn{width:100%;text-align:center}.info{gap:18px}}
 </style>
 </head>
 <body>
@@ -176,6 +183,8 @@ document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.que
 list.onclick=e=>{const b=e.target.closest('button');if(!b)return;const n=b.dataset.n;cart[n]=cart[n]||{p:+b.dataset.p,q:0};cart[n].q++;b.textContent='✓';setTimeout(()=>b.textContent='+',700);renderCart()};
 function renderCart(){const L=document.getElementById('lines');const k=Object.keys(cart);if(!k.length)return;L.innerHTML=k.map(n=>`<div><span>${n} × ${cart[n].q}</span><span>${cart[n].p*cart[n].q} ₽</span></div>`).join('');const tot=k.reduce((s,n)=>s+cart[n].p*cart[n].q,0),q=k.reduce((s,n)=>s+cart[n].q,0);document.getElementById('sum').textContent=tot+' ₽';msum.textContent=tot+' ₽';mcount.textContent=q+(q==1?' позиция':q<5?' позиции':' позиций');mbar.classList.add('show')}
 document.getElementById('f').onsubmit=e=>{e.preventDefault();document.getElementById('ok').style.display='block'};
+
+(()=>{const m=document.querySelector('.mcta');if(!m)return;const f=()=>m.classList.toggle('hide',scrollY<window.innerHeight*.7);addEventListener('scroll',f,{passive:true});f()})();
 </script>
 </body>
 </html>

@@ -75,6 +75,11 @@ section{padding:90px 0}
 .mcta{display:none}
 @media(max-width:700px){.mcta{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:10px;right:10px;bottom:10px;z-index:30}.mcta a{padding:15px;border-radius:14px;text-align:center;font-weight:700;box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}footer{padding-bottom:90px}}
 footer{background:var(--ink);color:#9fc2bd;padding:40px 0;font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}footer a{color:#5eead4}
+
+/* mobile polish */
+.mcta{transition:opacity .25s,transform .25s}
+.mcta.hide{opacity:0;pointer-events:none;transform:translateY(16px)}
+@media(max-width:520px){.tel{display:none}.hero .cta .btn{width:100%}.trust{gap:18px}.trust b{font-size:22px}}
 </style>
 </head>
 <body>
@@ -153,6 +158,8 @@ let i=0,base=null,mult=1,inst=false;const box=document.getElementById('qbox'),N=
 function r(){if(i<Q.length){box.innerHTML=`<div class="prog"><span style="width:${(i+1)/N*100}%"></span></div><div class="step">Вопрос ${i+1} из ${N}</div><h3>${Q[i][0]}</h3><div class="opts">${Q[i][1].map((o,k)=>`<button data-k="${k}">${o[0]}</button>`).join('')}</div>`;box.querySelectorAll('button').forEach(b=>b.onclick=()=>{const o=Q[i][1][b.dataset.k];if(i==0)base=o[1];if(i==1&&base[0]!==base[1])mult=o[1];if(i==4)inst=o[0].startsWith('Рассрочка');i++;r()})}
 else{const lo=Math.round(base[0]*(base[0]===base[1]?1:mult)/100)*100,hi=Math.round(base[1]*mult/100)*100,f=n=>n.toLocaleString('ru')+' ₽';box.innerHTML=`<div class="prog"><span style="width:100%"></span></div><div class="step">Предварительный расчёт</div><h3>${lo===hi?f(lo):f(lo)+' – '+f(hi)}</h3><p style="color:#5d7676;font-size:15px;margin:-8px 0 16px">${inst?`В рассрочку от ${f(Math.round(lo/12/10)*10)} в месяц, без переплаты. `:''}Точную сумму врач зафиксирует в договоре после бесплатной диагностики.</p><form id="qf"><input required placeholder="Имя"><input required type="tel" placeholder="+7 (___) ___-__-__"><button class="btn btn-t" style="width:100%">Записаться на бесплатную диагностику</button></form>`;document.getElementById('qf').onsubmit=e=>{e.preventDefault();box.innerHTML='<h3>Спасибо! 🦷</h3><p style="color:#5d7676">Это демо: заявка никуда не отправлена. В рабочей версии ответы квиза и контакт сразу попадают в CRM клиники, а администратор получает уведомление.</p>'}}}
 r();
+
+(()=>{const m=document.querySelector('.mcta');if(!m)return;const f=()=>m.classList.toggle('hide',scrollY<window.innerHeight*.7);addEventListener('scroll',f,{passive:true});f()})();
 </script>
 </body>
 </html>

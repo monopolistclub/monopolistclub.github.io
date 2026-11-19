@@ -82,6 +82,11 @@ section{padding:90px 0}
 .mcta{display:none}
 @media(max-width:700px){.mcta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30}footer{padding-bottom:90px}}
 footer{padding:36px 0;color:var(--muted);font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}footer a{color:var(--violet);font-weight:600}
+
+/* mobile polish */
+.mcta{transition:opacity .25s,transform .25s}
+.mcta.hide{opacity:0;pointer-events:none;transform:translateY(16px)}
+@media(max-width:520px){.hero .cta .btn{width:100%}nav>.btn{padding:10px 14px!important;font-size:14px}}
 </style>
 </head>
 <body>
@@ -162,6 +167,8 @@ else{const L=[["A0","Beginner",4],["A1","Elementary",3],["A2","Pre-Intermediate"
 document.getElementById('tf').onsubmit=e=>{e.preventDefault();tb.innerHTML='<h3>Спасибо! 🎉</h3><p style="color:#6a6788">Это демо: заявка никуда не отправлена. В рабочей версии результат теста уходит в CRM, а бот присылает план обучения.</p>'}}}
 r();
 document.getElementById('f').onsubmit=e=>{e.preventDefault();okm.style.display='block'};
+
+(()=>{const m=document.querySelector('.mcta');if(!m)return;const f=()=>m.classList.toggle('hide',scrollY<window.innerHeight*.7);addEventListener('scroll',f,{passive:true});f()})();
 </script>
 </body>
 </html>
