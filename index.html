@@ -600,7 +600,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
         <p>Как удобнее: в переписке или голосом. Первая консультация бесплатно, отвечаю в течение дня.</p>
         <ol class="steps3"><li>Опишите задачу или посчитайте цену в калькуляторе</li><li>Получите бриф или звонок, фиксированную цену и ссылку на предоплату</li><li>Через 2–3 дня получаете готовый результат</li></ol>
         <div class="links">
-          <a href="https://t.me/akashredder" target="_blank" rel="noopener">Telegram <span>@akashredder →</span></a>
+          <a href="https://t.me/akashredder" target="_blank" rel="noopener">Telegram-бот <span>@MonopolistClub_bot →</span></a>
           <a href="https://github.com/monopolistclub" target="_blank" rel="noopener">GitHub <span>monopolistclub →</span></a>
         </div>
       </div>
@@ -665,7 +665,7 @@ if(NI){
  document.title=NI.name+': '+document.title;
 }
 // When the funnel bot is live, put its username here (without @) and every CTA will open the bot.
-const BOT='';
+const BOT='MonopolistClub_bot';
 const TG='https://t.me/akashredder?text=';
 if(BOT){const bl='https://t.me/'+BOT+'?start='+(NK&&NICHES[NK]?NK:'site');document.querySelectorAll('a[href="https://t.me/akashredder"]').forEach(a=>a.href=bl);}const fmt=n=>n.toLocaleString('ru')+' ₽';
 const types=document.getElementById('types');let cur=types.querySelector('.on');
@@ -678,18 +678,23 @@ function calc(){let s=+cur.dataset.p,l=[[cur.dataset.n,fmt(s)]],urg=false;
  document.getElementById('term').textContent='Срок: '+term;
  document.getElementById('lines').innerHTML=l.map(x=>`<li><span>${x[0]}</span><span>${x[1]}</span></li>`).join('');
  const msg=`Привет! Хочу заказать (посчитал на сайте):\n${l.map(x=>x[0]+': '+x[1]).join('\n')}\nИтого: от ${fmt(s)}, срок ${term}${NICHE?`\nНиша: ${NICHE}`:''}\nПришли бриф и ссылку на предоплату.`;
- document.getElementById('calcSend').href=TG+encodeURIComponent(msg)}
+ if(BOT){const ids=['landing','auto','ads','agent'],CODE={'Квиз или калькулятор':'q','Интеграция с CRM':'c','Тексты под ключ':'t','Ещё одна страница':'p','Приём оплаты онлайн':'o'};
+  let codes='';document.querySelectorAll('#adds input:checked').forEach(c=>{codes+=c.dataset.urgent?'u':(CODE[c.dataset.n]||'')});
+  const svc=ids[[...types.querySelectorAll('button')].indexOf(cur)]||'landing';
+  document.getElementById('calcSend').href='https://t.me/'+BOT+'?start=calc_'+svc+'_'+(codes||'x')+(NI?'_'+NK:'');}
+ else document.getElementById('calcSend').href=TG+encodeURIComponent(msg)}
 types.onclick=e=>{const b=e.target.closest('button');if(!b)return;types.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');cur=b;calc()};
 document.querySelectorAll('#adds input').forEach(c=>c.onchange=calc);calc();
 document.querySelectorAll('[data-type]').forEach(a=>a.addEventListener('click',()=>{const b=types.querySelectorAll('button')[+a.dataset.type];if(b)b.click()}));
 document.querySelectorAll('.chips').forEach(g=>g.onclick=e=>{const b=e.target.closest('button');if(!b)return;g.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on')});
 document.querySelectorAll('[data-task]').forEach(a=>a.addEventListener('click',()=>{document.querySelectorAll('#chips button').forEach(b=>b.classList.toggle('on',b.textContent===a.dataset.task))}));
 const howG=document.getElementById("contactHow"),cbx=document.getElementById('callbox'),bb=document.getElementById('briefBtn');
-function setHow(m){howG.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x.dataset.h===m));cbx.style.display=m==='call'?'':'none';bb.textContent=m==='call'?'Заказать звонок →':'Получить предложение в Telegram →';}
+function setHow(m){howG.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x.dataset.h===m));cbx.style.display=(m==='call'&&!BOT)?'':'none';bb.textContent=m==='call'?(BOT?'Заказать звонок в Telegram →':'Заказать звонок →'):'Получить предложение в Telegram →';}
 howG.addEventListener('click',e=>{const b=e.target.closest('button');if(b)setHow(b.dataset.h)});
-document.querySelectorAll('[data-call]').forEach(a=>a.addEventListener('click',()=>{setHow('call');setTimeout(()=>document.getElementById('phone').focus(),400)}));
+document.querySelectorAll('[data-call]').forEach(a=>a.addEventListener('click',()=>{setHow('call');if(!BOT)setTimeout(()=>document.getElementById('phone').focus(),400)}));
 document.getElementById('brief').onsubmit=e=>{e.preventDefault();const t=document.querySelector('#chips .on')?.textContent||'',b=document.querySelector('#budget .on')?.textContent||'',d=document.getElementById('biz').value.trim();
  const isCall=howG.querySelector('.on').dataset.h==='call',ph=document.getElementById('phone').value.trim();
+ if(isCall&&BOT){window.open('https://t.me/'+BOT+'?start=call'+(NI?'_'+NK:''),'_blank','noopener');return}
  if(isCall&&ph.replace(/\D/g,'').length<10){const pi=document.getElementById('phone');pi.focus();pi.style.outline='2px solid #e10600';pi.placeholder='Укажите номер, чтобы я перезвонил';return}
  const wh=document.querySelector('#when .on')?.textContent||'';
  const msg=isCall?`Привет! Перезвоните мне, пожалуйста.\nТелефон: ${ph}\nКогда удобно: ${wh}\nНужно: ${t}\nБюджет: ${b}${d?`\nЗадача: ${d}`:''}${NICHE?`\nНиша: ${NICHE}`:''}`:`Привет! Нашёл тебя через сайт Monopolist club.\nНужно: ${t}\nБюджет: ${b}${d?`\nЗадача: ${d}`:''}${NICHE?`\nНиша: ${NICHE}`:''}\nПришли, пожалуйста, предложение с ценой и сроком.`;
